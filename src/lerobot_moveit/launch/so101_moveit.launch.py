@@ -28,6 +28,7 @@ def generate_launch_description():
             .robot_description(file_path=so101_urdf_path)
             .robot_description_semantic(file_path="config/so101.srdf")
             .trajectory_execution(file_path="config/moveit_controllers.yaml")
+            .planning_pipelines(pipelines=["ompl"], default_planning_pipeline="ompl")
             .to_moveit_configs()
             )
 
